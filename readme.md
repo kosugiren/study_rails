@@ -1,4 +1,4 @@
-# Railsチュートリアルメモ
+# Railsチュートリアル あんちょこ
 
 ## 第1章
 
@@ -20,14 +20,28 @@
   ```
   - Gemfileを編集しgemインストール  
     ※編集方法はチュートリアルサイト参照
-    ```
-    bundle _2.3.14_ install
-    ```
+  ```
+  bundle _2.3.14_ install
+  ```
   - サーバー起動
   ```
   rails server
   ```
   - localhost:3000にアクセスし表示確認
-  
-  
-  
+  - hello, worldを表示させる
+    - app/controllers/application_controller.rbを編集（Applicationコントローラにhelloを追加する）
+    ```
+    class ApplicationController < ActionController::Base
+      def hello
+        render html: "hello, world!"
+      end
+    end
+    ```
+    - config/routes.rbを編集（ルートルーティングを設定する）
+    ```
+    Rails.application.routes.draw do
+      root "application#hello"
+    end
+    ```
+    - サーバーを起動しブラウザにアクセスする
+
