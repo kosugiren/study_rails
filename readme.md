@@ -27,6 +27,10 @@
   ```
   rails server
   ```
+  or
+  ```
+  rails s
+  ```
   - localhost:3000にアクセスし表示確認
   - hello, worldを表示させる
     - app/controllers/application_controller.rbを編集（Applicationコントローラにhelloを追加する）
