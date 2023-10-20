@@ -57,4 +57,6 @@ rails generate scaffold User name:string email:string
 ```
 rails db:migrate
 ```
+```
 http://localhost:3000/users
+```
